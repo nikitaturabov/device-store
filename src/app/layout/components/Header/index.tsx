@@ -4,6 +4,7 @@ import {HeartIcon, MapPinIcon, ShoppingBagIcon, TruckIcon} from '@heroicons/reac
 import Image from 'next/image';
 import logo from '@/icons/logo.svg';
 import {RedCounter} from '@/components/RedCounter';
+import {Text} from '@/components/Typography/Text';
 
 
 export const Header = (): JSX.Element => {
@@ -24,22 +25,25 @@ export const Header = (): JSX.Element => {
         <FlexContainer classNames={'ml-2'}>
           <div className='flex cursor-pointer items-center gap-x-1 rounded-md py-2 px-4 hover:bg-gray-100'>
             <TruckIcon className='h-5 w-5 text-gray-500' />
-            <span className='text-sm font-medium'>Заказы</span>
+            <Text.Small weight={'medium'}>
+              Заказы
+            </Text.Small>
           </div>
 
           <div className='flex cursor-pointer items-center gap-x-1 rounded-md py-2 px-4 hover:bg-gray-100'>
             <HeartIcon className='h-5 w-5 text-gray-500' />
-            <span className='text-sm font-medium'>Избранное</span>
+            <Text.Small weight={'medium'}>
+              Избранное
+            </Text.Small>
           </div>
 
           <div className='flex cursor-pointer items-center gap-x-1 rounded-md py-2 px-4 hover:bg-gray-100'>
-            <div className='relative'>
-              <RedCounter num={3}>
-                <ShoppingBagIcon className='h-5 w-5 text-gray-500' />
-              </RedCounter>
-
-            </div>
-            <span className='text-sm font-medium'>Корзина</span>
+            <RedCounter num={3}>
+              <ShoppingBagIcon className='h-5 w-5 text-gray-500' />
+            </RedCounter>
+            <Text.Small weight={'medium'}>
+              Корзина
+            </Text.Small>
           </div>
 
           <div className='ml-2 flex cursor-pointer items-center gap-x-1 rounded-md border py-2 px-4 hover:bg-gray-100'>
