@@ -11,15 +11,17 @@ type TFlexContainer = {
 }
 
 export const FlexContainer: FunctionComponent<PropsWithChildren<TFlexContainer>> = (props) => {
-  const {classNames, direction, justify, alignContent, wrap, gap, children} = props;
+  const {classNames = '', direction, justify, alignContent, wrap, gap, children} = props;
 
   return <div
-    className={cn('flex', wrap && `flex-${wrap}`,
-      direction && `flex-${direction}`,
-      justify && `justify-${justify}`,
-      alignContent && `content-${alignContent}`,
-      gap && `gap-x-${gap}`,
-      classNames || '')}
+    className={cn('flex', {
+      [`flex-${wrap}`]: Boolean(wrap),
+      [`flex-${direction}`]: Boolean(direction),
+      [`justify-${justify}`]: Boolean(justify),
+      [`content-${alignContent}`]: Boolean(alignContent),
+      [`gap-x-${gap}`]: Boolean(gap),
+      [classNames]: Boolean(classNames)
+    })}
   >
     {children}
   </div>;
