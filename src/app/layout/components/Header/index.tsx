@@ -1,22 +1,17 @@
 import {FlexContainer} from '@/components/Flex/FlexContainer';
 import {FlexItem} from '@/components/Flex/FlexItem';
 import {HeartIcon, MapPinIcon, ShoppingBagIcon, TruckIcon} from '@heroicons/react/24/outline';
-import Image from 'next/image';
-import logo from '@/icons/logo.svg';
 import {RedCounter} from '@/components/RedCounter';
 import {Text} from '@/components/Typography/Text';
 import {MenuItems} from '@/app/layout/components/Header/MenuItems';
-
+import {Logo} from '@/app/layout/components/Header/Logo';
 
 export const Header = (): JSX.Element => {
   return <header className='bg-white'>
     <div className='border py-3 px-6'>
       <FlexContainer justify={'between'}>
         <FlexItem justifySelf={'center'}>
-          <FlexContainer justify={'between'}>
-            <Image src={logo} width={28} height={28} alt={''} />
-            <span className='ml-2 font-semibold text-[#252C32]'>Good Device 29</span>
-          </FlexContainer>
+          <Logo />
         </FlexItem>
 
         <FlexItem grow={'grow'} classNames={'ml-6'}>
