@@ -18,9 +18,9 @@ export const Header = (): JSX.Element => {
           </FlexContainer>
         </FlexItem>
 
-        <div className='ml-6 flex flex-1 gap-x-3'>
+        <FlexItem grow={'grow'} classNames={'ml-6'}>
           <input type='text' className='w-full rounded-md border border-[#DDE2E4] px-3 py-2 text-sm' />
-        </div>
+        </FlexItem>
 
         <FlexContainer classNames={'ml-2'}>
           <div className='flex cursor-pointer items-center gap-x-1 rounded-md py-2 px-4 hover:bg-gray-100'>
@@ -52,28 +52,30 @@ export const Header = (): JSX.Element => {
         </FlexContainer>
       </FlexContainer>
 
-      <div className='mt-4 flex items-center justify-between'>
-        <div className='flex gap-x-2'>
+      <FlexContainer classNames={'mt-4'} alignContent={'center'} justify={'between'}>
+        <FlexItem>
+          <FlexContainer classNames={'mt-4'} alignContent={'center'} justify={'between'} gap={2}>
+            <MapPinIcon className='h-5 w-5 text-gray-500' />
+            <span className='text-sm font-medium'>Архангельск</span>
+          </FlexContainer>
+        </FlexItem>
 
+        <FlexItem>
+          <FlexContainer gap={8}>
+            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>iPhones</span>
+            <span
+              className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Watch</span>
+            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Pods</span>
+            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Приставки</span>
+            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Процессоры</span>
+            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Мыши</span>
+            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Клавиатуры</span>
+            <span
+              className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Аксессуары</span>
+          </FlexContainer>
+        </FlexItem>
+      </FlexContainer>
 
-          <MapPinIcon className='h-5 w-5 text-gray-500' />
-
-          <span className='text-sm font-medium'>Архангельск</span>
-        </div>
-
-        <FlexContainer gap={8}>
-          <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>iPhones</span>
-          <span
-            className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Watch</span>
-          <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Pods</span>
-          <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Приставки</span>
-          <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Процессоры</span>
-          <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Мыши</span>
-          <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Клавиатуры</span>
-          <span
-            className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Аксессуары</span>
-        </FlexContainer>
-      </div>
     </div>
   </header>;
 };

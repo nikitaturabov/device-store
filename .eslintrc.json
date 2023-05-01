@@ -34,7 +34,6 @@
     "no-multi-str": "error",
     "no-self-compare": "error",
     "no-sequences": "error",
-    "no-shadow": "error",
     "no-undef-init": "error",
     "no-use-before-define": "error",
     "brace-style": "error",

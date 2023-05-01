@@ -1,27 +1,21 @@
 import {FunctionComponent, PropsWithChildren} from 'react';
 import cn from 'classnames';
-
-type TFlexContainer = {
-  direction?: 'column' | 'row';
-  classNames?: string;
-  justify?: 'between' | 'center' | 'start' | 'end' | 'around' | 'evenly' | 'stretch' | 'baseline';
-  alignContent?: 'between' | 'center' | 'start' | 'end' | 'around' | 'evenly' | 'stretch' | 'baseline';
-  wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
-  gap?: number;
-}
+import {alignContentConfig, directionConfig, gapsConfig, justifyConfig, TFlexContainer, wrapConfig} from '@/components/Flex/specs.d';
 
 export const FlexContainer: FunctionComponent<PropsWithChildren<TFlexContainer>> = (props) => {
-  const {classNames = '', direction, justify, alignContent, wrap, gap, children} = props;
+  const {classNames = '', direction, justify, alignContent, gap, wrap, children} = props;
+
+  const classes = cn('flex',
+    justify && justifyConfig[justify],
+    alignContent && alignContentConfig[alignContent],
+    wrap && wrapConfig[wrap],
+    direction && directionConfig[direction],
+    classNames && classNames,
+    gap && gapsConfig[gap]
+  );
 
   return <div
-    className={cn('flex', {
-      [`flex-${wrap}`]: Boolean(wrap),
-      [`flex-${direction}`]: Boolean(direction),
-      [`justify-${justify}`]: Boolean(justify),
-      [`content-${alignContent}`]: Boolean(alignContent),
-      [`gap-x-${gap}`]: Boolean(gap),
-      [classNames]: Boolean(classNames)
-    })}
+    className={classes}
   >
     {children}
   </div>;
