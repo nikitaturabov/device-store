@@ -5,6 +5,7 @@ import Image from 'next/image';
 import logo from '@/icons/logo.svg';
 import {RedCounter} from '@/components/RedCounter';
 import {Text} from '@/components/Typography/Text';
+import {MenuItems} from '@/app/layout/components/Header/MenuItems';
 
 
 export const Header = (): JSX.Element => {
@@ -62,16 +63,7 @@ export const Header = (): JSX.Element => {
 
         <FlexItem>
           <FlexContainer gap={8}>
-            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>iPhones</span>
-            <span
-              className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Watch</span>
-            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Pods</span>
-            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Приставки</span>
-            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Процессоры</span>
-            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Мыши</span>
-            <span className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Клавиатуры</span>
-            <span
-              className='cursor-pointer rounded-sm py-1 px-2 text-sm font-medium hover:bg-gray-100'>Аксессуары</span>
+            <MenuItems />
           </FlexContainer>
         </FlexItem>
       </FlexContainer>
