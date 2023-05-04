@@ -27,7 +27,7 @@ export const wrapConfig = {
 };
 
 export const directionConfig = {
-  column: 'flex-column',
+  column: 'flex-col',
   row: 'flex-row'
 };
 
@@ -79,7 +79,7 @@ export const gapsConfig = {
 
 export type TFlexContainer = {
   direction?: keyof typeof directionConfig;
-  classNames?: string;
+  className?: string;
   justify?: keyof typeof justifyConfig;
   alignContent?: keyof typeof alignContentConfig;
   wrap?: keyof typeof wrapConfig;
@@ -89,7 +89,7 @@ export type TFlexContainer = {
 type TFlexItem = {
   grow?: keyof typeof growConfig;
   shrink?: keyof typeof shrinkConfig;
-  classNames?: string;
+  className?: string;
   alignSelf?: keyof typeof alignSelfConfig;
   justifySelf?: keyof typeof justifySelfConfig;
 }
