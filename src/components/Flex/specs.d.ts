@@ -9,15 +9,12 @@ export const justifyConfig = {
   baseline: 'justify-baseline'
 };
 
-export const alignContentConfig = {
-  between: 'content-between',
-  center: 'content-center',
-  start: 'content-start',
-  end: 'content-end',
-  around: 'content-around',
-  evenly: 'content-evenly',
-  stretch: 'content-stretch',
-  baseline: 'content-baseline'
+export const alignItemsConfig = {
+  center: 'items-center',
+  start: 'items-start',
+  end: 'items-end',
+  stretch: 'items-stretch',
+  baseline: 'items-baseline'
 };
 
 export const wrapConfig = {
@@ -81,7 +78,7 @@ export type TFlexContainer = {
   direction?: keyof typeof directionConfig;
   className?: string;
   justify?: keyof typeof justifyConfig;
-  alignContent?: keyof typeof alignContentConfig;
+  alignItems?: keyof typeof alignItemsConfig;
   wrap?: keyof typeof wrapConfig;
   gap?: keyof typeof gapsConfig;
 }

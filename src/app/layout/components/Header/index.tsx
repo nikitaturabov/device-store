@@ -48,9 +48,9 @@ export const Header = (): JSX.Element => {
         </FlexContainer>
       </FlexContainer>
 
-      <FlexContainer classNames={'mt-4'} alignContent={'center'} justify={'between'}>
+      <FlexContainer classNames={'mt-4'} alignItems={'center'} justify={'between'}>
         <FlexItem>
-          <FlexContainer classNames={'mt-4'} alignContent={'center'} justify={'between'} gap={2}>
+          <FlexContainer classNames={'mt-4'} alignItems={'center'} justify={'between'} gap={2}>
             <MapPinIcon className='h-5 w-5 text-gray-500' />
             <span className='text-sm font-medium'>Архангельск</span>
           </FlexContainer>
