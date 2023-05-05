@@ -1,7 +1,8 @@
 import './globals.css';
 import {Header} from '@/app/layout/components/Header';
 import {Body} from '@/app/layout/components/Body';
-import {FunctionComponent, PropsWithChildren} from 'react';
+import React, {FunctionComponent, PropsWithChildren} from 'react';
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Home page',
@@ -9,12 +10,13 @@ export const metadata = {
 };
 
 const RootLayout: FunctionComponent<PropsWithChildren> = ({children}) => {
-  return (
-    <html lang='en'>
-      <Header />
-      <Body>{children}</Body>
-    </html>
-  );
+  return <>
+    <Head>
+      <title>Next.js with Auth0</title>
+    </Head>
+    <Header />
+    <Body>{children}</Body>
+  </>;
 };
 
 export default RootLayout;
