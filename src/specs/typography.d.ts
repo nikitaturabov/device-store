@@ -2,7 +2,7 @@ import {TColors} from '@/specs/colors';
 
 type TProps = {
   children: string;
-  classNames?: string;
+  className?: string;
   weight?: 'normal' | 'medium' | 'semibold' | 'bold';
   align?: 'left' | 'right' | 'center' | 'justify';
   color?: TColors;

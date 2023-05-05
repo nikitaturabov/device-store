@@ -14,11 +14,11 @@ export const Header = (): JSX.Element => {
           <Logo />
         </FlexItem>
 
-        <FlexItem grow={'grow'} classNames={'ml-6'}>
+        <FlexItem grow={'grow'} className={'ml-6'}>
           <input type='text' className='w-full rounded-md border border-[#DDE2E4] px-3 py-2 text-sm' />
         </FlexItem>
 
-        <FlexContainer classNames={'ml-2'}>
+        <FlexContainer className={'ml-2'}>
           <div className='flex cursor-pointer items-center gap-x-1 rounded-md py-2 px-4 hover:bg-gray-100'>
             <TruckIcon className='h-5 w-5 text-gray-500' />
             <Text.Small weight={'medium'}>
@@ -48,9 +48,9 @@ export const Header = (): JSX.Element => {
         </FlexContainer>
       </FlexContainer>
 
-      <FlexContainer classNames={'mt-4'} alignContent={'center'} justify={'between'}>
+      <FlexContainer className={'mt-4'} alignItems={'center'} justify={'between'}>
         <FlexItem>
-          <FlexContainer classNames={'mt-4'} alignContent={'center'} justify={'between'} gap={2}>
+          <FlexContainer className={'mt-4'} alignItems={'center'} justify={'between'} gap={2}>
             <MapPinIcon className='h-5 w-5 text-gray-500' />
             <span className='text-sm font-medium'>Архангельск</span>
           </FlexContainer>
