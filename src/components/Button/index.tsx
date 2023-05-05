@@ -1,18 +1,24 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
+import React from 'react';
 
-type TBtn = {
-  t: 'primary' | 'secondary' | 'tertiary' ;
-  size: 'large' | 'medium' | 'small';
-  handleClick: () => void;
+interface IBtn {
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  size?: 'large' | 'medium' | 'small';
+  onclick?: () => void;
   classes?: string;
-};
+  disabled?: boolean;
+}
 
-export const Button: FunctionComponent<PropsWithChildren<TBtn>> = (props) => {
-  const { handleClick, size, t, children, classes = ''} = props;
+export const Button: FunctionComponent<PropsWithChildren<IBtn>> = (props) => {
+  const {
+    onclick,
+    size = 'medium',
+    variant = 'primary',
+    children,
+    ...rest
+  } = props;
 
-  return (
-    <button t={t} size={size} className={classes} onClick={handleClick}>
-      {children}
-    </button>
-  );
+  return <button className={`btn ${variant} ${size} (disabled ? 'disabled' : '')`} onClick={onclick} {...rest}>
+    {children}
+  </button>;
 };
