@@ -23,7 +23,7 @@ body {
 
 @layer components {
   .btn {
-    @apply py-2 px-4 m-2 rounded;
+    @apply py-2 px-4 m-2 rounded transition-all;
   }
 
   .small {
@@ -42,12 +42,24 @@ body {
     @apply bg-gray-100 text-black;
   }
 
+  .primary:hover {
+    @apply bg-gray-400;
+  }
+
   .secondary {
     @apply bg-gray-800 text-white;
   }
 
+  .secondary:hover {
+    @apply bg-gray-600;
+  }
+
   .tertiary {
     @apply bg-white text-black border border-black;
+  }
+
+  .tertiary:hover {
+    @apply bg-gray-100;
   }
 
   .disabled {

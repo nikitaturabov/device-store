@@ -1,7 +1,7 @@
-import {Home} from '@/app/pages/Home';
+import {Auth} from '@/app/pages/Auth';
 
 const App = () => {
-  return <Home />;
+  return <Auth />;
 };
 
 export default App;

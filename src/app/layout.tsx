@@ -1,29 +1,33 @@
+'use client';
 import './globals.css';
 import { Header } from '@/app/layout/components/Header';
 import { Body } from '@/app/layout/components/Body';
-import { FunctionComponent, PropsWithChildren } from 'react';
+import React, { FunctionComponent, PropsWithChildren } from 'react';
+import Head from 'next/head';
 import { Button } from '@/components/Button';
 
-export const metadata = {
-  title: 'Home page',
-  description: 'Gooddevice29 техника apple в Архангельске'
-};
+// export const metadata = {
+//   title: 'Home page',
+//   description: 'Gooddevice29 техника apple в Архангельске',
+// };
 
-const RootLayout: FunctionComponent<PropsWithChildren> = () => {
+const RootLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const handleClickOne = () => {
-    alert('Click on Button 1');
+    alert('Click on button one!');
   };
 
   const handleClickTwo = () => {
-    alert('Click on Button 2');
+    alert('Click on button one!');
   };
 
   const handleClickThree = () => {
-    alert('Click on Button 3');
+    alert('Click on button one!');
   };
-
   return (
-    <html lang='en'>
+    <>
+      <Head>
+        <title>Next.js with Auth0</title>
+      </Head>
       <Header />
       <Body>
         <Button variant='primary' size='small' onclick={handleClickOne}>
@@ -35,8 +39,9 @@ const RootLayout: FunctionComponent<PropsWithChildren> = () => {
         <Button variant='tertiary' size='large' onclick={handleClickThree}>
           Click
         </Button>
+        {children}
       </Body>
-    </html>
+    </>
   );
 };
 
