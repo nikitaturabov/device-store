@@ -30,7 +30,9 @@
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.2",
-    "eslint": "^8.38.0",
-    "eslint-plugin-implicit-dependencies": "^1.1.1"
+    "eslint": "^8.38.0"
+  },
+  "eslintConfig": {
+    "extends": []
   }
 }
