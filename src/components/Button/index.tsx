@@ -1,24 +1,26 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
 import React from 'react';
 
+type TBtnTypes = 'primary' | 'secondary' | 'tertiary';
+type TBtnSizes = 'large' | 'medium' | 'small';
+
 interface IBtn {
-  variant?: 'primary' | 'secondary' | 'tertiary';
-  size?: 'large' | 'medium' | 'small';
-  onclick?: () => void;
-  classes?: string;
+  type?: TBtnTypes;
+  size?: TBtnSizes;
+  onClick?: () => void;
+  className?: string;
   disabled?: boolean;
 }
 
 export const Button: FunctionComponent<PropsWithChildren<IBtn>> = (props) => {
   const {
-    onclick,
+    onClick,
     size = 'medium',
-    variant = 'primary',
-    children,
-    ...rest
+    type = 'primary',
+    children
   } = props;
 
-  return <button className={`btn ${variant} ${size} (disabled ? 'disabled' : '')`} onClick={onclick} {...rest}>
+  return <div className={`btn ${type} ${size} (disabled ? 'disabled' : '')`} onClick={onClick}>
     {children}
-  </button>;
+  </div>;
 };
