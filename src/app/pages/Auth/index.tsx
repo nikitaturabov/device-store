@@ -3,8 +3,15 @@ import { FlexItem } from '@/components/Flex/FlexItem';
 import { Title } from '@/components/Typography/Title';
 import { Text } from '@/components/Typography/Text';
 import { Button } from '@/components/Button';
+import React from 'react';
 
 export const Auth = () => {
+
+  const handleClick = (event: MouseEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    alert('click');
+  };
+
   return (
     <FlexContainer className={'h-full'} justify={'center'}>
       <FlexItem>
@@ -55,13 +62,13 @@ export const Auth = () => {
             >
               <span className='text-sm font-medium'>Войти</span>
             </button>
-            <Button type='primary' size='small' onClick={() => alert('alert')}>
+            <Button type='primary' size='small' onClick={handleClick}>
               Click
             </Button>
-            <Button type='secondary' size='medium'>
+            <Button type='secondary' size='medium' onClick={handleClick}>
               Click
             </Button>
-            <Button type='tertiary' size='large'>
+            <Button type='tertiary' size='large' onClick={handleClick}>
               Click
             </Button>
           </FlexContainer>
