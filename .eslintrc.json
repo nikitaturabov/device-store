@@ -9,13 +9,16 @@
   },
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "no-console": "error",
     "no-unused-vars": "error",
     "no-dupe-keys": "error",
@@ -58,7 +61,8 @@
         "code": 140
       }
     ],
-    "no-extra-semi": "error"
+    "no-extra-semi": "error",
+    "import/no-spaces-around-imports": "off"
   }
 }
 
